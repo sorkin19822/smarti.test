@@ -1,4 +1,5 @@
-nodes = document.querySelectorAll('.field');
-var first = nodes[0];
-
-fields
+$( document ).ready(function() {
+    $( ".addrule" ).click(function() {
+        fieldRule = $('.field:last').clone().appendTo('.field:last')
+    });
+});
