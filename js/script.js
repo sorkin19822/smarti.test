@@ -6,11 +6,27 @@ $( document ).ready(function() {
     $( ".clear" ).click(function() {
         clear();
     });
+    $( ".apply" ).click(function() {
+        $(".field").each(function( index ) {
+            var data = new Object();
+            data.name=$(this).find('select[name="field"]').val();
+            data.operator=$(this).find('select[name="operator"]').children("option:selected").val();
+            data.number=$(this).find('input[name="number"]').val();
+            console.log(data)
+        });
+    });
 
 });
 
 function deleteField(elem) {
     if($(".field").length>1) $(elem).closest(".field").remove()
+}
+
+function apply() {
+    res = $(".field").map(function(){ // вызываем функцию на каждом элементе <input>
+         $( this ).val(); // возвращаем значение текущего элемента
+    })
+
 }
 
 function clear() {

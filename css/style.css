@@ -1,4 +1,6 @@
-
+.wrapper>div{
+    min-width: 500px;
+}
 .panel{
     width: 100%;
 }
