@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.1/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.1/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.1/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/script.js.js"></script>
 </head>
 <body>
-<div>
-    <div>
-        <form class="uk-grid-small" uk-grid>
-            <div class="uk-width-1-1">
-                <input class="uk-input" type="text" placeholder="100">
-            </div>
-            <div class="uk-width-1-2@s">
-                <input class="uk-input" type="text" placeholder="50">
+
+<div uk-grid class="wrapper uk-flex uk-flex-center uk-margin-xlarge-top">
+    <div class="uk-width-1-2@s fields">
+        <div class="field">
+        <div class="uk-grid-small" uk-grid>
+            <div class="uk-width-1-4@s">
+                <select class="uk-select" name="field">
+                    <option value disabled selected>Field...</option>
+                    <option value="size">size</option>
+                    <option value="forks">forks</option>
+                    <option value="stars">stars</option>
+                    <option value="followers">followers</option>
+                </select>
             </div>
             <div class="uk-width-1-4@s">
-                <input class="uk-input" type="text" placeholder="25">
+                <select class="uk-select">
+                    <option value disabled selected name="operator">Operator...</option>
+                    <option value=">"> Больше </option>
+                    <option value="<"> Меньше </option>
+                    <option value="="> Равно </option>
+                </select>
             </div>
             <div class="uk-width-1-4@s">
-                <input class="uk-input" type="text" placeholder="25">
+                <input class="uk-input" type="number" id="tentacles" name="number"
+                       min="0" step="1" >
             </div>
-            <div class="uk-width-1-2@s">
-                <input class="uk-input" type="text" placeholder="50">
+            <div class="uk-width-1-4@s">
+                <a class="uk-button  uk-button-danger delete delete" href="#">Delete</a>
+
             </div>
-            <div class="uk-width-1-2@s">
-                <input class="uk-input" type="text" placeholder="50">
-            </div>
-        </form>
+
+        </div>
+        </div>
+        <hr>
+        <p uk-margin class="panel">
+            <a class="uk-button  uk-button-primary uk-align-left apply" href="#">Apply</a>
+            <a class="uk-button  uk-button-secondary uk-align-left clear" href="#">Clear</a>
+            <a class="uk-button  uk-button-default uk-align-right addrule" href="#">addRule</a>
+        </p>
     </div>
 </div>
 </body>
